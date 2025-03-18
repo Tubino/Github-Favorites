@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+:root {
+  font-size: 62.5%;
+
+  /* Colors Content*/
+  --ff-primary: "Roboto", sans-serif;;
+  --text-color: #E1E1E6; 
+  --button-color: #065E7C;
+
+  /* Background */
+  --background-primary: #092D38;
+  --background-secondary: #06161B;
+  --input-background: #06181C;
+
+  --outline-border-table: #4A808C;
+
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: rgb(0, 0, 0);
+}
+
+body * {
+  line-height: 100%;
+  font-family: var(--ff-primary);
+
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  
+}
+
+#app {
+  padding: 11.5rem 16rem;
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8.7rem;
+  
+}
+
+header .logo {
+  width: 16rem;
+  height: 3.2rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+
+  gap: .8rem;
+}
+
+.search input {
+  height: 3.8rem;
+  width: 35rem;
+  border-radius: .5rem;
+  border: none;
+  padding: 1.6rem;
+
+  font-size: 1,6rem;
+  font-weight: 300;
+  background: var(--input-background);
+  font-family: var(--ff-primary);
+}
+
+.search input::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.search input:focus {
+  color: var(--text-color);
+  font-weight: bold;
+  outline: 1px solid var(--outline-border-table);
+}
+
+.search button {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: 1.6rem;
+  width: 13.8rem;
+  height: 3.8rem;
+
+  font-family: var(--ff-primary);
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.search button img {
+  width: 2rem;
+  height: 2rem;
+  transition: filter 0.3s ease-in-out;
+}
+
+.search button:hover {
+  background-color: #FFF;
+  color: var(--button-color);
+}
+
+.search button:hover img {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(91%) saturate(450%) hue-rotate(160deg) brightness(90%) contrast(90%);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 1.2rem;
+  outline: 1px solid var(--outline-border-table); 
+  overflow: hidden;
+  
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+} 
+
+
+table th {
+  background: var(--background-primary);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.6rem 4rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+tbody tr {
+  background: var(--background-primary);
+  border-bottom: 1px solid var(--outline-border-table)
+
+}
+
+table tr:last-child {
+  border-bottom: none; /* Remove a linha da última linha para evitar duplicação na borda */
+}
+
+table tr:nth-child(odd) {
+  background: var(--background-secondary);
+}
+
+table td {
+  padding: 2.4rem 4rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  font-family: var(--ff-primary);
+  background: none;
+  font-weight: 600;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.empty-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 6rem;
+  height: 62.4rem;
+}
+
+.empty-message img {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.empty-message span {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.67;
+}
+
+.hidden {
+  display: none;
+}
